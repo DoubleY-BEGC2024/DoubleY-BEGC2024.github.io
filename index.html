@@ -233,6 +233,11 @@
       <br>
     </div>
   </div>
+  <p class="caption" style="width: 100%; text-align: center;">Figure 2. The proposed diffusion augmentation pipeline. 
+    (1) Use pretrained segmentation model to generate semantic segmentation. 
+    (2) Refine the segmentation mask using the building polygon labels. 
+    (3) Concatenate input image with the semantic mask. 
+    (4) Train the segmentation-guided diffusion model using the concatenated inputs.</p>  
   <!-- End methodology overview--> 
   
   <!-- Model Selection -->  
