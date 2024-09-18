@@ -430,7 +430,7 @@
               This F1 score is even higher than that of Setup B, which was trained with the Redmond dataset. This observation 
               demonstrates that our diffusion augmentation method successfully created semantically different images that were 
               sufficient to diversify the BEGC2024 training set. </li>
-            <li style="margin-bottom: 5px;"><strong>Setup E:</strong> 0.24 - We also tried CutMix augmentation to diversify the 
+            <li style="margin-bottom: 5px;"><strong>Setup E:</strong> 0.650 - We also tried CutMix augmentation to diversify the 
               training dataset to improve generalization of our model. However, we found this method to be less effective, 
               achieving an F1 score of only 0.650, as shown in Setup E of Table III. The F1 score improvement was almost negligible 
               compared to our baseline in Setup A. We believe this is due to the lack of variation in building structures, as we 
@@ -452,13 +452,7 @@
       <h4 class="title is-3" style="white-space: nowrap;">Model Selection</h4>
       <div class="content has-text-justified">
         <div style="text-align: justify;">
-          <p>YOLOv8 series comes with several instance segmentation models, ranging from the smallest nano (n) variant to the 
-            largest extra-large (x) variant. We performed several experiments to select the best YOLOv8 variant for our task, 
-            considering both the F1 score and model complexity, as shown in Table I. Additionally, we compared the performance of 
-            YOLOv8-based instance segmentation models with other state-of-the-art models, including YOLOv9, Mask R-CNN, and EfficientNet. 
-            All models are trained for 50 epochs with 640 image size. During test time and submission, the confidence and NMS IoU 
-            thresholds are set as 0.20 and 0.70, unless stated otherwise. We also tested the F1-score of the models with a confidence 
-            threshold of 0.50, primarily to evaluate how confident the models are rather than for actual submission.
+          <p>We compare our solutions with the 2nd and 3rd place in the leaderboard:
           </p>
           <table class="table is-bordered is-hoverable">                    
             <tr>
