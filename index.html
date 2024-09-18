@@ -444,6 +444,83 @@
   </div>
   <!-- Dataset -->   
 
+
+
+  <!-- Kaggle Leaderboard -->  
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h4 class="title is-3" style="white-space: nowrap;">Model Selection</h4>
+      <div class="content has-text-justified">
+        <div style="text-align: justify;">
+          <p>YOLOv8 series comes with several instance segmentation models, ranging from the smallest nano (n) variant to the 
+            largest extra-large (x) variant. We performed several experiments to select the best YOLOv8 variant for our task, 
+            considering both the F1 score and model complexity, as shown in Table I. Additionally, we compared the performance of 
+            YOLOv8-based instance segmentation models with other state-of-the-art models, including YOLOv9, Mask R-CNN, and EfficientNet. 
+            All models are trained for 50 epochs with 640 image size. During test time and submission, the confidence and NMS IoU 
+            thresholds are set as 0.20 and 0.70, unless stated otherwise. We also tested the F1-score of the models with a confidence 
+            threshold of 0.50, primarily to evaluate how confident the models are rather than for actual submission.
+          </p>
+          <table class="table is-bordered is-hoverable">                    
+            <tr>
+              <th rowspan=2>Solution</th>
+              <th rowspan=2>FLOPS (G)</th>
+              <th colspan="2">F1-Score</th>
+            </tr>
+            <tr>
+              <td>Public</td>
+              <td>Private</td>
+            </tr>
+            <tr>
+              <td>YOLOv8m-seg + BEGC 2024</td>
+              <td rowspan=4>110.2</td>
+              <td>0.64926</td>
+              <td>0.66531</td>
+            </tr>
+            <tr>
+              <td>YOLOv8m-seg + BEGC 2024 + Redmond Dataset</td>
+              <td>0.65951</td>
+              <td>0.67133</td>
+            </tr>
+            <tr>
+              <td>YOLOv8m-seg + BEGC 2024 + Las Vegas Dataset</td>
+              <td>0.68627</td>
+              <td>0.70326</td>
+            </tr>
+            <tr>
+              <td>YOLOv8m-seg + BEGC 2024 + Diffusion Augmentation</td>
+              <td>0.67189</td>
+              <td>0.68096</td>
+            </tr>
+            <tr>
+              <td>2nd place (RTMDet-x + Alabama Buildings Segmentation Dataset)</td>
+              <td>141.7</td>
+              <td>0.6813</td>
+              <td>0.68453</td>
+            </tr>
+            <tr>
+              <td>3rd Place (Custom Mask-RCNN + No extra Dataset)</td>
+              <td>124.1</td>
+              <td>0.59314</td>
+              <td>0.60649</td>
+            </tr>
+          </table>
+          
+          <p>Our observations:</p>
+          <ol type="1" padding-left: 0;">
+            <li style="margin-bottom: 5px;">Generally, using an additional dataset, whether it is an open-sourced dataset or a 
+              synthetic dataset, helps improve the training of YOLOv8-Seg. </li>
+            <li style="margin-bottom: 5px;">However, you might sample high-quality or low-quality additional datasets from 
+              open-sourced databases without careful engineering. For instance, using the Redmond dataset only slightly 
+              improves the F1 score compared to using the BEGC 2024 dataset alone. On the other hand, using the Las Vegas dataset 
+              significantly improves the F1 score, achieving the top F1 score among all methods.</li>           
+          </ol>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Kaggle Leaderboard -->     
+
   
 
   <!-- Conclusion -->
