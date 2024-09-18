@@ -215,55 +215,82 @@
         <div style="text-align: justify;">
           <p>Before delving into the proposed methodology, we introduce the key elements and assumptions as shown here:
           </p>
-          <table class="table is-bordered is-hoverable">
+          <table class="table is-bordered is-hoverable">          
             <thead>
               <tr>
-                <th></th>
-                <th>Key Element</th>
-                <th>Description</th>                  
+                <th rowspan="2">Model</th>
+                <th rowspan="2">Pretrained Weights</th>
+                <th rowspan="2">Batch Size</th>
+                <th rowspan="2">Params (M)</th>
+                <th rowspan="2">FLOPs (G)</th>
+                <th colspan="2">Public F1-Score</th>
+              </tr>
+              <tr>
+                <th>Conf = 0.50</th>
+                <th>Conf = 0.20</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td>Target Region</td>
-                <td>Puerto Rico</td>      
-              </tr>    
+                <td>YOLOv8n-seg</td>
+                <td rowspan="4">DOTAv1 Aerial Detection</td>
+                <td>16</td>
+                <td>3.4</td>
+                <td>12.6</td>
+                <td>0.510</td>
+                <td>0.645</td>
+              </tr>
               <tr>
-                <td>2</td>
-                <td>Object Detection Model</td>
-                <td>YOLOv8n</td>      
-              </tr>    
+                <td>YOLOv8s-seg</td>
+                <td>16</td>
+                <td>11.8</td>
+                <td>42.6</td>
+                <td>0.535</td>
+                <td>0.654</td>
+              </tr>
               <tr>
-                <td>3</td>
-                <td>Microsoft BF dataset</td>
-                <td>Only the Puerto Rico region</td>      
-              </tr>    
+                <td>YOLOv8m-seg</td>
+                <td>16</td>
+                <td>27.3</td>
+                <td>110.2</td>
+                <td>0.592</td>
+                <td>0.649</td>
+              </tr>
               <tr>
-                <td>4</td>
-                <td>Puerto Rico dataset</td>
-                <td>5690 unique data</td>      
-              </tr>    
-              <tr>
-                <td>5</td>
-                <td>Non-experts</td>
-                <td>Annotators with limited expertise in the given task</td>      
-              </tr>    
-              <tr>
-                <td>6</td>
-                <td>Experts</td>
-                <td>Annotators with expertise in the given task</td>      
-              </tr>        
-              <tr>
-                <td>7</td>
-                <td>Crowdsourced dataset</td>
-                <td>Dataset annotated by non-experts (200 unique data)</td>      
-              </tr>   
-              <tr>
+                <td>YOLOv8x-seg</td>      
                 <td>8</td>
-                <td>Expert dataset</td>      
-                <td>Datasets annotated by the experts (28 unique data)</td>
-              </tr>                 
+                <td>71.8</td>
+                <td>344.1</td>
+                <td>0.579</td>
+                <td>0.627</td>
+              </tr>
+              <tr>
+                <td>YOLOv9c-seg</td>
+                <td>COCO Segmentation</td>
+                <td>4</td>
+                <td>27.9</td>
+                <td>159.4</td>
+                <td>0.476</td>
+                <td>0.577</td>
+              </tr>
+              <tr>
+                <td>Mask R-CNN (MPViT-Tiny)</td>
+                <td>COCO Segmentation</td>
+                <td>4</td>
+                <td>17</td>
+                <td>196.0</td>
+                <td>-</td>
+                <td>0.596</td>
+              </tr>
+              <tr>
+                <td>EfficientNet-b0-YOLO-seg</td>
+                <td>ImageNet</td>
+                <td>4</td>
+                <td>6.4</td>
+                <td>12.5</td>
+                <td>-</td>
+                <td>0.560</td>
+              </tr>
             </tbody>
           </table>
           
