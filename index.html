@@ -620,9 +620,11 @@
             is better than BEGC2024 + Redmond dataset.
           </p>
           <p>
-            <strong>2. Diffusion Augmentation is label-efficient:</strong> Diffusion augmentaion is what you need if: 1) you do not have
-            access to extra dataset, or 2) your extra dataset is not good enough. It might be difficult to extract the suitable extra 
-            dataset to diversify your training set
+            <strong>2. Diffusion Augmentation is label-efficient:</strong> Diffusion augmentaion is what you need if you do not have
+            extra dataset which is diverse enough from the original training set. For instance, the Redmond dataset is not as useful 
+            as the Las Vegas dataset. However, it might be difficult and/or costly to find out the suitable extra dataset. On the other 
+            hand, we do not need extra dataset to prepare our diffusion augmentation pipeline. Even better, BEGC2024 + Diffusion Augmentation
+            outperforms BEGC2024 + Redmond dataset, and also outperforms the 2nd and 3rd place entrants!
           </p>          
           <p>
             <strong>3. Start with a small model:</strong> We recommend starting with a smaller model. It is unwise to use a 
