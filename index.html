@@ -204,15 +204,13 @@
   <!-- Methodology Overview -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3" style="white-space: nowrap;">Method 2: Diffusion Augmentation</h2>
+      <h2 class="title is-3" style="white-space: nowrap;">Method 1: Using Additional Open-Sourced Dataset</h2>
       <div class="content has-text-justified">
         <div style="text-align: center;">
-          <img src="static/images/Segmentation Guided Diffusion.jpg" alt="Segmentation Guided Diffusion" width="820">
-          <p class="caption" style="width: 100%; text-align: center;">Figure 2. The proposed diffusion augmentation pipeline. 
-            (1) Use pretrained segmentation model to generate semantic segmentation. 
-            (2) Refine the segmentation mask using the building polygon labels. 
-            (3) Concatenate input image with the semantic mask. 
-            (4) Train the segmentation-guided diffusion model using the concatenated inputs.</p>
+          <img src="static/images/ROI cropped from Microsoft BF Dataset.png" alt="Microsoft BF Dataset" width="820">
+          <p class="caption" style="width: 100%; text-align: center;">Figure 1: The region of interest for the building footprints 
+            extracted from the Microsoft Building Footprint (BF) dataset. (a) Redmond, Washington. (b) Las Vegas, Nevada. 
+            For simplicity's sake, we refer the former as Redmond dataset, and the latter as Las Vegas dataset.</p>
         </div>
       </div>
       <br>
