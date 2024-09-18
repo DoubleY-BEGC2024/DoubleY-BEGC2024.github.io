@@ -295,15 +295,16 @@
           
           <p>Our assumptions:</p>
           <ol type="1" padding-left: 0;">
-            <li style="margin-bottom: 5px;">When labelling multiple versions of the provided post-disaster dataset, 
-              we observed that not all annotated data aligns with the expected outcomes in the EY validation images. 
-              Some of our annotated datasets yield high mAP, some yield low mAP. </li>
-            <li style="margin-bottom: 5px;">Consequently, we assume datasets that perform exceptionally well as the 
-              “expert dataset,” annotated by “expert annotators.” Conversely, the datasets that do not yield results 
-              as good as the expert dataset are referred to as the “crowd-sourced dataset”. </li>
-            <li style="margin-bottom: 5px;">We assume expert annotators could effectively differentiate damaged/undamaged 
-              commercial and residential buildings. Logically, the expert dataset is a high-quality dataset but lower in 
-              quantity. </li>
+            <li style="margin-bottom: 5px;">Generally, we observe that the F1 score increases when scaling up the model from 
+              the smallest YOLOv8n-seg to the medium size YOLOv8m-seg.  Notably, there is a significant jump in F1 score 
+              from the YOLOv8s-seg to the YOLOv8m-seg when evaluated in confidence threshold of 0.50, with the score improving 
+              from 0.535 to 0.592. </li>
+            <li style="margin-bottom: 5px;">Interestingly, the F1 score of YOLOv8m-seg is slightly lower than the smaller YOLOv8s-seg 
+              when setting the confidence threshold to 0.20. This observation suggest that the m-variant still has a bigger room of 
+              improvement compared to s-variant. </li>
+            <li style="margin-bottom: 5px;">Meanwhile, the largest YOLOv8x-seg variant has a lower F1 score than YOLOv8m-seg in 
+              both confidence threshold 0.50 and 0.20. This suggests that further improvements in F1 score beyond the m-variant 
+              may be minimal unless we enhance the quality of the training dataset or address generalizability issues.</li>
             <li style="margin-bottom: 5px;">Meanwhile, crowd-sourced dataset is a high quantity dataset, with lower-quality 
               annotations. We assume this is labelled by volunteer annotators in real life scenario, rather than the 
               experts.</li>
