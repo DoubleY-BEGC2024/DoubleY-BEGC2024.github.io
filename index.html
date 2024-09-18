@@ -201,7 +201,26 @@
   </div>
   <!-- Key Challenges -->
 
-  <!-- Key elements and Assumptions -->  
+  <!-- Methodology Overview -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3" style="white-space: nowrap;">Method 2: Diffusion Augmentation</h2>
+      <div class="content has-text-justified">
+        <div style="text-align: center;">
+          <img src="static/images/Segmentation Guided Diffusion.jpg" alt="Segmentation Guided Diffusion" width="820">
+          <p class="caption" style="width: 100%; text-align: center;">Figure 2. The proposed diffusion augmentation pipeline. 
+            (1) Use pretrained segmentation model to generate semantic segmentation. 
+            (2) Refine the segmentation mask using the building polygon labels. 
+            (3) Concatenate input image with the semantic mask. 
+            (4) Train the segmentation-guided diffusion model using the concatenated inputs.</p>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  <!-- End methodology overview--> 
+  
+  <!-- Model Selection -->  
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
       <h4 class="title is-3" style="white-space: nowrap;">Model Selection</h4>
@@ -325,23 +344,7 @@
       </div>
     </div>
   </div>
-  <!-- Key elements and Assumptions -->   
-  
-  <!-- Methodology Overview -->
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3" style="white-space: nowrap;">Methodology Overview</h2>
-      <div class="content has-text-justified">
-        <div style="text-align: center;">
-          <img src="static/images/Team Double Y - Methodology.jpg" alt="PrepareData" width="820">
-          <p class="caption" style="width: 100%; text-align: center;"><b>Figure 1. Overview of the proposed methodology.</b><br>
-            Workflow illustrating the complete process from data acquisition to model training.</p>
-        </div>
-      </div>
-      <br>
-    </div>
-  </div>
-  <!-- End methodology overview--> 
+  <!-- Key elements and Assumptions -->     
 
   
   <!-- Key Highlights of our Pipeline -->
