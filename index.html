@@ -522,6 +522,86 @@
   </div>
   <!-- Kaggle Leaderboard -->     
 
+
+
+  <!-- NMS IoU Threshold -->    
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h4 class="title is-3" style="white-space: nowrap;">Comparison with 2nd and 3rd Place Entrants</h4>
+      <div class="content has-text-justified">
+        <div style="text-align: justify;">
+          <p>We compare our solutions with the 2nd and 3rd place in the leaderboard:
+          </p>
+          <table class="table is-bordered is-hoverable">                              
+            <thead>
+              <tr>
+                <th rowspan="2">Dataset</th>
+                <th colspan="6">Private F1 Score</br>(using different NMS IoU Threshold)</th>
+              </tr>
+              <tr>
+                <th>0.70</th>
+                <th>0.75</th>
+                <th>0.80</th>
+                <th>0.85</th>
+                <th>0.90</th>
+                <th>0.95</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BEGC2024 + Redmond Dataset</td>
+                <td>0.672</td>
+                <td>0.677</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0.748</td>
+                <td>0.866</td>
+              </tr>
+              <tr>
+                <td>BEGC2024 + Las Vegas Dataset</td>
+                <td>0.703</td>
+                <td>0.693</td>
+                <td>0.686</td>
+                <td>0.721</td>
+                <td>0.766</td>
+                <td>0.897</td>
+              </tr>
+              <tr>
+                <td>BEGC2024 + Diffusion Augmentation</td>
+                <td>0.681</td>
+                <td>-</td>
+                <td>0.694</td>
+                <td>0.711</td>
+                <td>0.751</td>
+                <td>0.887</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>Our observations:</p>
+          <ol type="1" padding-left: 0;">
+            <li style="margin-bottom: 5px;">Generally, using an additional dataset, whether it is an open-sourced dataset or a 
+              synthetic dataset, helps improve the training of the model. </li>
+            <li style="margin-bottom: 5px;">However, you might sample high-quality or low-quality additional datasets from 
+              open-sourced databases without careful engineering. For instance, using the Redmond dataset only slightly 
+              improves the F1 score compared to using the BEGC 2024 dataset alone. On the other hand, using the Las Vegas dataset 
+              significantly improves the F1 score, achieving the top F1 score among all methods.</li>   
+            <li style="margin-bottom: 5px;">On the other hand, using our diffusion augmentation, we can generate a synthetic dataset 
+              to train YOLOv8m-Seg without needing an additional dataset (which means no extra manual annotation is required). 
+              Using BEGC2024 combined with the synthetic dataset, our YOLOv8m-Seg model achieved an F1 score that is significantly 
+              higher than the baseline and close to our top-1 score (using the Las Vegas dataset) and the 2nd-place solution.</li>   
+            <li style="margin-bottom: 5px;">Note that the 2nd-place solution uses a bigger model (higher FLOPs) with an additional 
+              dataset to reach a high F1 score, whereas our diffusion augmentation pipeline allows our model (lower FLOPs) to 
+              achieve a surprisingly close F1 score without an additional dataset.</li>               
+          </ol>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NMS IoU Threshold -->   
+
+  
   
 
   <!-- Conclusion -->
