@@ -308,10 +308,15 @@
             <li style="margin-bottom: 5px;"> We also tried training YOLOv9 instance segmentation model. Specficially, we chose YOLOv9c, 
               which corresponds to the m-variant of YOLOv8 (YOLOv8m-seg). However, we find that YOLOv9 is hard to train and slower 
               due to the high FLOPS, with no F1-score improvement.</li>
-            <li style="margin-bottom: 5px;">Other than YOLO family, we also tried using Mask R-CNN with the MPViT backbone. However, 
+            <li style="margin-bottom: 5px;"> Other than YOLO family, we also tried using Mask R-CNN with the MPViT backbone. However, 
               due to resource constraints, we were only able to test the smallest MPViT-Tiny for our Mask R-CNN backbone. The modified
               Mask R-CNN has a slightly higher F1 score than YOLOv9c, but is inferior to all YOLOv8 variants we tried. It is not only
               slow, but also not accurate.</li>            
+            <li style="margin-bottom: 5px;"> Lastly, we tried replacing the YOLOv5 backbone with EfficientNet, which is a lightweight yet
+              effective CNN model designed for low-computational-power. We uses the smallest EfficientNet-b0 as the replacement backbone.
+              It is able to reach a considerably high F1 score (close to both YOLOv9c and Mask R-CNN) with significantly lower FLOPs. 
+              However, the F1 score is still significantly lower than YOLOv8 series. We believe the performance could be further improved 
+              by pretraining the EfficientNet with COCO segmentation, and scaling up the EfficientNet backbone.</li>            
           </ol>
           
         </div>
