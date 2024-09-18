@@ -584,19 +584,17 @@
           
           <p>Our observations:</p>
           <ol type="1" padding-left: 0;">
-            <li style="margin-bottom: 5px;">Generally, using an additional dataset, whether it is an open-sourced dataset or a 
-              synthetic dataset, helps improve the training of the model. </li>
-            <li style="margin-bottom: 5px;">However, you might sample high-quality or low-quality additional datasets from 
-              open-sourced databases without careful engineering. For instance, using the Redmond dataset only slightly 
-              improves the F1 score compared to using the BEGC 2024 dataset alone. On the other hand, using the Las Vegas dataset 
-              significantly improves the F1 score, achieving the top F1 score among all methods.</li>   
-            <li style="margin-bottom: 5px;">On the other hand, using our diffusion augmentation, we can generate a synthetic dataset 
-              to train YOLOv8m-Seg without needing an additional dataset (which means no extra manual annotation is required). 
-              Using BEGC2024 combined with the synthetic dataset, our YOLOv8m-Seg model achieved an F1 score that is significantly 
-              higher than the baseline and close to our top-1 score (using the Las Vegas dataset) and the 2nd-place solution.</li>   
-            <li style="margin-bottom: 5px;">Note that the 2nd-place solution uses a bigger model (higher FLOPs) with an additional 
-              dataset to reach a high F1 score, whereas our diffusion augmentation pipeline allows our model (lower FLOPs) to 
-              achieve a surprisingly close F1 score without an additional dataset.</li>               
+            <li style="margin-bottom: 5px;">Generally, we found that IoU thresholds of 0.90 and 0.95 work best compared to 
+              other threshold settings. </li>
+            <li style="margin-bottom: 5px;">Note that simply increasing the IoU threshold does not directly translate to 
+              better performance, as it may lead to an increase in false positives that should have been suppressed by the 
+              NMS layers. </li>          
+            <li style="margin-bottom: 5px;">For instance, setting the IoU threshold between 0.75 and 0.80 is generally 
+              worse than the default 0.70 threshold. </li>  
+            <li style="margin-bottom: 5px;">Hence, our final submission is the YOLOv8m-seg model trained on the BEGC2024 and 
+              Las Vegas datasets, with the IoU threshold for NMS set to 0.95.  </li>               
+            <li style="margin-bottom: 5px;">In future works, we consider trying more advanced NMS variation including Attention based NMS
+              and Density-based NMS to better mitigate this problem.  </li>                
           </ol>
           
         </div>
