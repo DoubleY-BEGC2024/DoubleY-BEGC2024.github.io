@@ -361,59 +361,7 @@
   </div>
   <!-- Key elements and Assumptions -->     
 
-  
-  <!-- Key Highlights of our Pipeline -->
-  <!--   
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h4 class="title is-3" style="white-space: nowrap;">Key Highlights</h4>
-      <div class="content has-text-justified">
-        <div style="text-align: justify;">
-          <p>
-            <strong>1. Dataset Collection:</strong> We remove images that only feature undamaged residential buildings 
-            (the majority class) to ensure the training dataset does not skew towards one class over another.
-          </p>
-          <p>
-            <strong>2. Class Imbalanced:</strong> We removed images that only feature undamaged residential buildings 
-            (the majority class) to ensure the training dataset does not skew towards one class over another.
-          </p>
-          <p>
-            <strong>3. Out-of-Distribution data:</strong> We removed images featuring industrial zones and urban areas, 
-            as the validation dataset primarily consists of rural settings. 
-          </p>          
-        </div>
-      </div>
-      <br><br>
-    </div>
-  </div>
-  -->  
-  <!-- Key Highlights of our Pipeline -->
 
-  
-  <!-- Model -->
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h4 class="title is-3" style="white-space: nowrap;">Model</h4>
-      <div class="content has-text-justified">
-        <div style="text-align: justify;">
-          <p>
-            The goal of Phase 1 is to identify and detect “damaged” and “undamaged” coastal infrastructure, which is an  
-            object detection task. To tackle this challenge, our team has opted for Ultralytics <strong>YOLOv8</strong>, 
-            one of the state-of-the-art (SOTA) object detection models renowned for its speed and accuracy. Despite the availability 
-            of competitors like YOLOv9, we prefer Ultralytics YOLOv8 for its user-friendliness and well-documented workflows 
-            that streamline training and deployment. We choose the smallest YOLOv8 - <strong>YOLOv8n</strong>, since it is 
-            <strong>unwise to use larger model when dealing with limited dataset</strong>, as it may lead to overfitting. 
-            Given more time, we would explore other YOLOv8 version and other SOTA models when we have a bigger dataset. 
-            Meanwhile, our empirical study revealed that the main influencing factor on the detection accuracy is 
-            the quantity and quality of the annotated dataset. Hence, we argue that the main focus of the challenge 
-            should be data annotation. We provide details on how we built our training dataset in the next section.            
-          </p>
-        </div>
-      </div>
-      <br><br>
-    </div>
-  </div>
-  <!-- Model -->
 
   
   <!-- Submission Experiments Table -->
