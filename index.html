@@ -527,10 +527,14 @@
   <!-- NMS IoU Threshold -->    
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h4 class="title is-3" style="white-space: nowrap;">Comparison with 2nd and 3rd Place Entrants</h4>
+      <h4 class="title is-3" style="white-space: nowrap;">NMS IoU Threshold</h4>
       <div class="content has-text-justified">
         <div style="text-align: justify;">
-          <p>We compare our solutions with the 2nd and 3rd place in the leaderboard:
+          <p>Non-maximal suppression (NMS) can be less effective at detecting small, densely packed objects, as it relies on 
+            IoU to suppress overlapping bounding boxes. In scenarios involving small and dense objects, the bounding boxes 
+            often overlap significantly, which can lead to the suppression of true positives. We can mitigate this issue by 
+            increasing the IoU threshold in the NMS layer to prevent unnecessary reduction of bounding boxes. We experimented 
+            by increasing the IoU threshold in the NMS layer of YOLOv8m-seg from the default 0.70 to 0.95, with increments of 0.05. 
           </p>
           <table class="table is-bordered is-hoverable">                              
             <thead>
