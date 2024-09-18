@@ -293,7 +293,7 @@
             </tbody>
           </table>
           
-          <p>Our assumptions:</p>
+          <p>Our observations:</p>
           <ol type="1" padding-left: 0;">
             <li style="margin-bottom: 5px;">Generally, we observe that the F1 score increases when scaling up the model from 
               the smallest YOLOv8n-seg to the medium size YOLOv8m-seg.  Notably, there is a significant jump in F1 score 
@@ -305,12 +305,13 @@
             <li style="margin-bottom: 5px;">Meanwhile, the largest YOLOv8x-seg variant has a lower F1 score than YOLOv8m-seg in 
               both confidence threshold 0.50 and 0.20. This suggests that further improvements in F1 score beyond the m-variant 
               may be minimal unless we enhance the quality of the training dataset or address generalizability issues.</li>
-            <li style="margin-bottom: 5px;">Meanwhile, crowd-sourced dataset is a high quantity dataset, with lower-quality 
-              annotations. We assume this is labelled by volunteer annotators in real life scenario, rather than the 
-              experts.</li>
-            <li style="margin-bottom: 5px;">We assume all buildings in Microsoft BF dataset are undamaged residential buildings 
-              (since majority buildings are residential). The exact class is not important, since the dataset is only for 
-              pretraining.</li>            
+            <li style="margin-bottom: 5px;"> We also tried training YOLOv9 instance segmentation model. Specficially, we chose YOLOv9c, 
+              which corresponds to the m-variant of YOLOv8 (YOLOv8m-seg). However, we find that YOLOv9 is hard to train and slower 
+              due to the high FLOPS, with no F1-score improvement.</li>
+            <li style="margin-bottom: 5px;">Other than YOLO family, we also tried using Mask R-CNN with the MPViT backbone. However, 
+              due to resource constraints, we were only able to test the smallest MPViT-Tiny for our Mask R-CNN backbone. The modified
+              Mask R-CNN has a slightly higher F1 score than YOLOv9c, but is inferior to all YOLOv8 variants we tried. It is not only
+              slow, but also not accurate.</li>            
           </ol>
           
         </div>
