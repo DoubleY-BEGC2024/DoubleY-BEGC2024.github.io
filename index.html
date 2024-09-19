@@ -121,12 +121,19 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Summary</h2>
           <div class="content has-text-justified">
-            <p> This competition embarks on this challenge by utilizing a building footprint dataset from the Tokyo area as the primary 
-              training set, with plans to extend testing to other Japanese regions. This approach aims to inspire the development of models 
-              with robust generalization capabilities, capable of overcoming the hurdles of automatic building footprint detection and 
-              extraction across various landscapes. Overcoming this challenge signifies the creation of a novel approach for efficient, 
-              cost-effective, and precise building footprint extraction at a national level with minimal regional data, showcasing its 
-              potential applicability worldwide.
+            <p> Deep learning has significantly advanced the field of building extraction from remote sensing images, providing robust solutions 
+              for identifying and delineating building footprints. However, a major challenge persists in the form of domain adaptation, particularly 
+              when addressing cross-city variations. The primary challenge lies in the significant differences in building appearances across cities, 
+              influenced by variations in building shapes and environmental characteristics. Consequently, models trained on data from one city often 
+              struggle to accurately identify buildings in another city. In this paper, we address this challenge from a data-centric perspective, 
+              focusing on diversifying the training set. Our empirical results show that improving data diversity via open-source datasets and 
+              diffusion augmentation significantly improved the performance of the segmentation model. Our baseline model, trained with no extra dataset, 
+              only achieved a private F1 score of 0.663. On the other hand, our best model, trained with the additional Las Vegas building footprints 
+              extracted from the Microsoft Building Footprint dataset, achieved a high private F1 score of 0.703. Surprisingly, we found that diffusion 
+              augmentation helps improve our model score to 0.681 without requiring an extra dataset, which is higher than the baseline model. Finally, 
+              we also experimented with the Non-Maximal Suppression (NMS) hyperparameter to improve the model’s performance in segmenting dense and 
+              small objects, which gave us a high private F1 score of 0.897. Our source code and the pretrained models are publicly available at 
+              https://github.com/yjwong1999/RSGuidedDiffusion. 
             </p>
           </div>
         </div>
