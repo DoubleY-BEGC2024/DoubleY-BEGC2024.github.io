@@ -146,22 +146,17 @@
             with robust generalization capabilities, capable of overcoming the hurdles of automatic building footprint detection and extraction across 
             various landscapes. Overcoming this challenge signifies the creation of a novel approach for efficient, cost-effective, and precise building 
             footprint extraction at a national level with minimal regional data, showcasing its potential applicability worldwide.</p>
+          <p><strong>2. Mandatory Training Data:</strong></p>
           <ul>
-            <li>Undamaged residential buildings</li>
-            <li>Damaged residential buildings</li>
-            <li>Undamaged commercial buildings</li>
-            <li>Damaged commercial buildings</li>
+            <li>The training set data uses 0.3-meter Google earth satellite images complemented by meticulously manually annotated building outlines. 
+              A total of 4717 images are provided, where all of them are extracted within Tokyo vicinity. The training data was divided into a training set 
+              and a validation set with a ratio of 8:2. </li>
           </ul>
-          <p><strong>2. Mandatory Dataset:</strong></p>
+          <p><strong>Mandatory Test Data:</strong></p>
           <ul>
-            <li>High-resolution panchromatic satellite images before and after a tropical cyclone: Maxar GeoEye-1
-              (optical)</li>
-          </ul>
-          <p><strong>3. Optional Dataset (that we used):</strong></p>
-          <ul>
-            <li><a href="https://planetarycomputer.microsoft.com/dataset/ms-buildings">Microsoft Building footprint dataset</a>, 
-              with over 999 million buildings from Bing Maps imagery between 2014 and 2021 including Maxar and Airbus 
-              imagery.</li>
+            <li>The imagery and building annotations for both test sets derive from the open-source Japanese 3D city model, the Plateau project (https://www.mlit.go.jp/plateau/) 
+              enhanced with manual adjustments following visual inspection. All test images were randomly selected from 42 cities in Japan, but a balance of different types of 
+              areas was maintained. A total of 250 images were taken from each region, totaling 1,000 images.</li>
           </ul>          
         </div>
       </div>
